@@ -4,29 +4,33 @@
     <title>Add new person ( Selenium and RobotFramework test)</title>
 <head>
 <body>
-Enter your name :
-<input type="input" id="inputname">
-<br>
-Select your gender:
-<select id="gender"><option value="man">Man</option><option value="woman">Woman</option></select>
-<br>
-<button id="addData">Add value</button>
-
-<br><br>
-<table id="datalist" border="3">
-<tr>
-    <th>person uuid</th>
-    <th>name</th>
-    <th>gender</th>
-</tr>
-</table>
+	
+    Enter your name :
+    <input type="input" id="inputname">
+    <br>
+    Select your gender:
+    <select id="gender">
+        <option value="man">Man</option>
+        <option value="woman">Woman</option>
+    </select>
+    <br>
+    <button id="addData">Add value</button>
+    <br><br>
+    <table id="datalist" border="3">
+        <tr>
+            <th>person uuid</th>
+            <th>name</th>
+            <th>gender</th>
+        </tr>
+    </table>
 
 <script type="text/javascript">
 
 //https://stackoverflow.com/questions/105034/how-do-i-create-a-guid-uuid
 function generateUUID() { // Public Domain/MIT
     var d = new Date().getTime();//Timestamp
-    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    var d2 = ((typeof performance !== 'undefined') && performance.now && (performance.now()*1000)) || 0;
+    //Time in microseconds since page-load or 0 if unsupported
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
         var r = Math.random() * 16;//random number between 0 and 16
         if(d > 0){//Use timestamp until depleted
@@ -52,13 +56,8 @@ document.getElementById("addData").addEventListener("click", function() {
 
     document.getElementById("datalist").innerHTML += tableRow;
 
-//https://www.youtube.com/watch?v=erddGOJTp5Q
-//https://www.youtube.com/watch?v=DBg0TZGTAkg
-//https://jjtheengineer.blogspot.com/2016/12/how-to-use-optional-keyword-arguments.html
-//https://stackoverflow.com/questions/46476894/robot-framework-selecting-value-from-a-dropdown-list-which-appears-after-mouse	
-
-
-		});
-	</script>
+});
+</script>
 </body>
 </html>
+
